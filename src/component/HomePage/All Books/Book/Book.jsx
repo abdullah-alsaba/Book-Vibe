@@ -1,30 +1,43 @@
+import { FaRegStar } from "react-icons/fa";
 
+const Book = ({ book }) => {
+  return (
+    <div className="card w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+      <figure className="bg-[#F3F3F3] p-8 m-6 rounded-2xl">
+        <img
+          src={book.image}
+          alt={book.bookName}
+          className="h-56 object-contain"
+        />
+      </figure>
 
-const Book = ({book}) => {
-    return (
-      <div>
-        <div className="card bg-base-100 w-96 shadow-sm">
-          <figure>
-            <img src={book.image} alt={book.bookName} />
-          </figure>
-          <div className="flex gap-4 mt-2">
-            {book.tags.map((tag) => (
-              <div className="badge badge-soft badge-success font-bold">
-                {tag}
-              </div>
-            ))}
-          </div>
-          <div className="card-body">
-            <h2 className="card-title text-2xl">{book.bookName}</h2>
-            <p className="font-semibold text-gray-400">By: {book.author}</p>
-            <div className="card-actions border-t border-dashed border-gray-300 pt-4 flex justify-between">
-              <div className="text-xl font-semibold">{book.category}</div>
-              <div className="text-xl font-semibold">{book.rating}</div>
-            </div>
-          </div>
+      <div className="card-body pt-0">
+        <div className="flex gap-3">
+          {book.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-bold mt-4">{book.bookName}</h2>
+
+        <p className="text-gray-500 font-medium">By : {book.author}</p>
+
+        <div className="border-t border-dashed border-gray-300 mt-5 pt-5 flex justify-between items-center">
+          <span className="text-gray-600 font-medium">{book.category}</span>
+
+          <span className="flex items-center gap-2 font-semibold">
+            {book.rating}
+            <FaRegStar />
+          </span>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Book;
