@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import "../../index.css";
 
 const Navbar = () => {
@@ -9,11 +10,34 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <NavLink
+              className={({ isActive }) =>
+                `font-semibold mr-2 ${isActive ? "text-green-500 border border-green-500" : ""}`
+              }
+              to={"./"}
+            >
+              Home
+            </NavLink>
           </li>
-          <li>Listed Books</li>
           <li>
-            <a>Pages to Read</a>
+            <NavLink
+              className={({ isActive }) =>
+                `font-semibold mr-2  ${isActive ? "text-green-500 border border-green-500" : ""}`
+              }
+              to={"./books"}
+            >
+              Listed Books
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `font-semibold mr-2 ${isActive ? "text-green-500 border border-green-500" : ""}`
+              }
+              to={"./page-to-read"}
+            >
+              Pages to Read
+            </NavLink>
           </li>
         </ul>
       </div>
