@@ -1,9 +1,10 @@
+import Banner from "../../component/HomePage/Banner";
 import "../../index.css"
 
 const HomePage = () => {
     return (
         <div>
-            Hello 
+            <Banner></Banner>
         </div>
     );
 };
