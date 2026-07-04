@@ -1,4 +1,5 @@
 
+import { Link } from "react-router";
 import "../../index.css";
 
 const Error = () => {
@@ -40,6 +41,16 @@ const Error = () => {
               />
             </svg>
           </div>
+        </div>
+
+        {/* Button */}
+        <div className="mt-12">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-cyan-400 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
+          >
+            ← Back to Home
+          </Link>
         </div>
       </div>
     </div>
