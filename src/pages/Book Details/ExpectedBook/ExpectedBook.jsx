@@ -21,7 +21,7 @@ const ExpectedBook = ({ expectedBook }) => {
             By : {expectedBook.author}
           </p>
 
-          <div className="border-y py-5 my-6">
+          <div className="border-y border-gray-200 py-5 my-6">
             <p className="text-lg">{expectedBook.category}</p>
           </div>
 
@@ -45,7 +45,7 @@ const ExpectedBook = ({ expectedBook }) => {
             </div>
           </div>
 
-          <div className="border-y my-8 py-6 space-y-4">
+          <div className="border-y border-gray-200 my-8 py-6 space-y-4">
             <div className="flex">
               <span className="w-48 text-gray-500">Number of Pages:</span>
               <span className="font-bold">{expectedBook.totalPages}</span>

@@ -1,55 +1,56 @@
-
 import { Link } from "react-router";
-import "../../index.css";
 
 const Error = () => {
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-900 via-gray-900 to-black flex items-center justify-center px-6">
-      <div className="text-center max-w-xl">
+    <div className="min-h-screen bg-[#F7F8F8] flex items-center justify-center px-6">
+      <div className="max-w-2xl text-center">
         {/* 404 */}
-        <h1 className="text-8xl md:text-9xl font-extrabold bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-[120px] md:text-[180px] font-extrabold text-[#23BE0A] leading-none">
           404
         </h1>
 
-        {/* Title */}
-        <h2 className="mt-6 text-3xl md:text-4xl font-bold text-white">
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-gray-800 mt-2">
           Oops! Page Not Found
         </h2>
 
         {/* Description */}
-        <p className="mt-4 text-gray-400 text-lg leading-relaxed">
-          The page you're looking for doesn't exist, has been moved, or the URL
-          might be incorrect.
+        <p className="mt-5 text-gray-500 text-lg leading-8 max-w-xl mx-auto">
+          Sorry, the page you are looking for doesn't exist or may have been
+          moved. Let's get you back to exploring amazing books.
         </p>
 
-        {/* Illustration */}
-        <div className="mt-10 flex justify-center">
+        {/* Book Illustration */}
+        <div className="flex justify-center my-10">
           <div className="relative">
-            <div className="w-36 h-36 rounded-full bg-cyan-500/20 blur-3xl absolute"></div>
+            <div className="absolute inset-0 bg-green-200 blur-3xl rounded-full opacity-40"></div>
 
-            <svg
-              className="relative w-36 h-36 text-cyan-400"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.172 9.172a4 4 0 015.656 0m-5.656 5.656a4 4 0 005.656 0M12 3v1m0 16v1m8-9h1M3 12H2m15.364-6.364l.707-.707M5.929 18.071l-.707.707m0-13.435l.707.707m12.728 12.728l-.707-.707"
-              />
-            </svg>
+            <div className="relative w-40 h-52 bg-white rounded-xl shadow-xl border border-gray-200 flex flex-col items-center justify-center">
+              <div className="w-24 h-2 bg-[#23BE0A] rounded mb-3"></div>
+
+              <div className="w-20 h-2 bg-gray-300 rounded mb-2"></div>
+
+              <div className="w-16 h-2 bg-gray-300 rounded mb-6"></div>
+
+              <span className="text-6xl">📖</span>
+            </div>
           </div>
         </div>
 
-        {/* Button */}
-        <div className="mt-12">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-cyan-400 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
+            className="btn bg-[#23BE0A] hover:bg-green-700 border-none text-white px-8"
           >
-            ← Back to Home
+            Back to Home
+          </Link>
+
+          <Link
+            to="/books"
+            className="btn btn-outline border-[#23BE0A] text-[#23BE0A] hover:bg-[#23BE0A] hover:text-white"
+          >
+            Browse Books
           </Link>
         </div>
       </div>
