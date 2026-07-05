@@ -1,5 +1,5 @@
 import { use } from "react";
-import Book from "./Book/Book";
+import Book from "./Books/Book";
 
 const bookPromise = fetch("/booksData.json").then((res) => res.json());
 
