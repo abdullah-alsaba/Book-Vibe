@@ -1,4 +1,12 @@
+import { useContext } from "react";
+import { BookContext } from "../../../routes/Context/BookProviderContext";
+
 const ExpectedBook = ({ expectedBook }) => {
+
+  const { handelReadButton } = useContext(BookContext);
+ 
+
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <div className="flex flex-col lg:flex-row gap-12">
@@ -68,7 +76,13 @@ const ExpectedBook = ({ expectedBook }) => {
           </div>
 
           <div className="flex gap-4">
-            <button className="btn bg-white border border-gray-400 text-black hover:bg-gray-100">
+            <button
+              className="btn bg-white border border-gray-400 text-black hover:bg-gray-100"
+              onClick={() => 
+             
+                  handelReadButton(expectedBook)
+              }
+            >
               Read
             </button>
 
