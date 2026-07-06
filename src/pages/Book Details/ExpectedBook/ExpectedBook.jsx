@@ -3,7 +3,7 @@ import { BookContext } from "../../../routes/Context/BookProviderContext";
 
 const ExpectedBook = ({ expectedBook }) => {
 
-  const { handelReadButton } = useContext(BookContext);
+  const { handelReadButton, handelWishlistButton } = useContext(BookContext);
  
 
 
@@ -78,15 +78,15 @@ const ExpectedBook = ({ expectedBook }) => {
           <div className="flex gap-4">
             <button
               className="btn bg-white border border-gray-400 text-black hover:bg-gray-100"
-              onClick={() => 
-             
-                  handelReadButton(expectedBook)
-              }
+              onClick={() => handelReadButton(expectedBook)}
             >
               Read
             </button>
 
-            <button className="btn bg-cyan-500 hover:bg-cyan-600 text-white border-none">
+            <button
+              className="btn bg-cyan-500 hover:bg-cyan-600 text-white border-none"
+              onClick={() => handelWishlistButton(expectedBook)}
+            >
               Wishlist
             </button>
           </div>
